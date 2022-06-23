@@ -42,7 +42,7 @@ public class PaymentController {
         service.createPayment(payment);
         paymentEmitter.send(payment.toString());
         return Response.status(Response.Status.CREATED)
-                .entity(String.format("Order Created with id: %s", id)).build();
+                .entity(String.format("Payment Created with id: %s", id)).build();
     }
 
     @GET
